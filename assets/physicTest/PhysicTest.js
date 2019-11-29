@@ -163,7 +163,7 @@ module.exports = {
             name:'shapeRenderer',
             components:[[Circle,Polygon]],
             beforeUpdate:function (dt,now,ecs) {
-                if (this.getSize()<2500) {
+                if (this.getSize()<1200) {
                     ecs.spawnEntity('Circle',Dice.rng(-300,300),Dice.rng(-300,300),Dice.rng(3,8),1);
                     ecs.spawnEntity('Polygon',Dice.rng(-300,300),Dice.rng(-300,300),[[-4, -4], [4, -4], [4, 4], [-4, 4]],Dice.rng(0,3),1);
                 }
